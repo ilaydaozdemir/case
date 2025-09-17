@@ -33,7 +33,7 @@ export default function FavSection(){
             
             {/* Desktop görünüm */}
             <div 
-                className="absolute top-0 left-0 z-10 hidden md:flex items-center justify-center gap-8"
+                className="absolute top-0 left-0 z-10 hidden md:flex items-center justify-center gap-8 mb-16"
                 style={{
                     backgroundColor: "rgba(255, 255, 255, 1)",
                     clipPath: "polygon(0 0, 100% 0, 94% 70%, 0 99%)",
@@ -60,8 +60,31 @@ export default function FavSection(){
             </div>
             
             {/* İçerik alanı */}
-            <div className="px-4 md:px-8 lg:px-16">
-                <h2 className="text-white text-2xl font-bold">Favoriler</h2>
+            <div className="px-4 md:px-8 lg:px-16 mt-16 md:mt-50">
+                <div className="flex flex-col md:flex-row gap-8">
+                  
+                    <div className="flex-1">
+                        <h2 
+                            className="text-white font-bold text-[40px] md:text-[60px] text-center md:text-left"
+                            style={{
+                                fontFamily: '"Saira Condensed", var(--font-saira), ui-sans-serif, system-ui, -apple-system, "Segoe UI"',
+                                fontWeight: "700",
+                                lineHeight: "89%",
+                                letterSpacing: "0%",
+                                color: "rgba(255, 255, 255, 1)"
+                            }}
+                        >
+                            <span className="block">AYIN</span>
+                            <span className="block">FAVORİLERİ</span>
+                        </h2>
+                    </div>
+                    
+                    <div className="flex-1">
+                        <div className="text-white">
+                            <p>İçerik burada görünecek</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
