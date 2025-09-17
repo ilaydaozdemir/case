@@ -5,10 +5,10 @@ export default function TrendSection() {
   return (
     <div
       className="w-full"
-      style={{
-        backgroundColor: "rgba(18, 18, 18, 1)",
-        height: "854px",
-      }}
+       style={{
+         backgroundColor: "rgba(18, 18, 18, 1)",
+         height: "calc(100% + 72px)",
+       }}
     >
       <div className="flex items-center pt-[83px] pl-4 md:pl-8 lg:pl-16">
         <h2
