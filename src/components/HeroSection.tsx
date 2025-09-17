@@ -29,7 +29,7 @@ export default function HeroSection() {
         <SwiperSlide>
           <div className="w-full h-full  flex items-center justify-center translate-y-[25px] relative overflow-hidden">
             <div
-              className="absolute left-4 top-20 md:right-20 md:left-auto md:top-[87px] xl:right-40 z-10"
+              className="absolute left-1/2 -translate-x-1/2 top-20 md:right-20 md:left-auto md:translate-x-0 md:top-[87px] xl:right-40 z-10 text-center md:text-left"
               style={{
                 color: "rgba(18, 18, 18, 1)",
                 fontFamily:
@@ -37,7 +37,7 @@ export default function HeroSection() {
               }}
             >
               <h2
-                className="font-bold text-[32px] md:text-[60.1px] leading-[110%]"
+                className="font-bold text-[30px] md:text-[60.1px] leading-[110%]"
                 style={{ letterSpacing: "-0.02em" }}
               >
                 <span className="block">DÜNYA RAP</span>
@@ -56,12 +56,39 @@ export default function HeroSection() {
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi.
               </p>
+              <div
+                className="mt-4"
+                style={{
+                  filter: "drop-shadow(5.55px 5.55px 0px rgba(0, 0, 0, 1))",
+                }}
+              >
+                <button
+                  className="text-black border-0 cursor-pointer flex items-center justify-center"
+                  style={{
+                    width: "136px",
+                    height: "39px",
+                    backgroundColor: "rgba(240, 231, 77, 1)",
+                    clipPath: "polygon(0 0, 100% 0, 95% 97%, 5% 83%);",
+                    WebkitClipPath: "polygon(0 0, 100% 0, 95% 97%, 5% 83%);",
+                    fontFamily:
+                      "var(--font-saira), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial",
+                    fontWeight: "700",
+                    fontSize: "14px",
+                    lineHeight: "1",
+                    letterSpacing: "0%",
+                    textAlign: "center",
+                  }}
+                >
+                  Devamını Oku
+                </button>
+              </div>
             </div>
-            <Image 
-              src="/images/hero1.png" 
-              alt="Hero 1" 
+            <Image
+              src="/images/hero1.png"
+              alt="Hero 1"
               width={1200}
               height={623}
+              className="block h-full w-auto"
               priority
             />
             <Image
@@ -75,6 +102,61 @@ export default function HeroSection() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="w-full h-full flex items-center justify-start translate-y-[25px] relative overflow-hidden">
+            <div
+              className="absolute left-1/2 -translate-x-1/2 top-20 md:right-20 md:left-auto md:translate-x-0 md:top-[87px] xl:right-40 z-10 text-center md:text-left"
+              style={{
+                color: "rgba(255, 255, 255, 1)",
+                fontFamily:
+                  '"Saira Condensed", var(--font-saira), ui-sans-serif, system-ui, -apple-system, "Segoe UI"',
+              }}
+            >
+              <h2
+                className="font-bold text-[30px] md:text-[60.1px] leading-[110%]"
+                style={{ letterSpacing: "-0.02em" }}
+              >
+                <span className="block">TÜRKÇE RAP VE</span>
+                <span className="block">DÜNYA MÜZİK</span>
+                <span className="block">HABERLERİNİ TAKİP ET</span>
+              </h2>
+              <p
+                className="mt-2 text-[14px] md:text-[16px] leading-[120%] font-normal tracking-[0.015em] max-w-[320px] md:max-w-[560px]"
+                style={{
+                  fontFamily:
+                    'var(--font-saira), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial',
+                }}
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi.
+              </p>
+              <div
+                className="mt-4"
+                style={{
+                  filter: "drop-shadow(5.55px 5.55px 0px rgba(0, 0, 0, 1))",
+                }}
+              >
+                <button
+                  className="text-black border-0 cursor-pointer flex items-center justify-center"
+                  style={{
+                    width: "136px",
+                    height: "39px",
+                    backgroundColor: "rgba(240, 231, 77, 1)",
+                    clipPath: "polygon(0 0, 100% 0, 95% 97%, 5% 83%);",
+                    WebkitClipPath: "polygon(0 0, 100% 0, 95% 97%, 5% 83%);",
+                    fontFamily:
+                      "var(--font-saira), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial",
+                    fontWeight: "700",
+                    fontSize: "14px",
+                    lineHeight: "1",
+                    letterSpacing: "0%",
+                    textAlign: "center",
+                  }}
+                >
+                  Devamını Oku
+                </button>
+              </div>
+            </div>
             <Image
               src="/images/hero2.png"
               alt="Hero 2"
@@ -92,6 +174,23 @@ export default function HeroSection() {
           </div>
         </SwiperSlide>
       </Swiper>
+
+      {/* Vector effect as frame at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 pointer-events-none z-20 h-20">
+        <Image
+          src="/images/vektor.png"
+          alt="Vector effect"
+          width={1200}
+          height={80}
+          className="w-full h-full object-cover"
+          style={{
+            filter:
+              "hue-rotate(0deg) saturate(0%) brightness(0%) contrast(1000%)",
+            opacity: 1,
+          }}
+        />
+      </div>
+
       <button
         className="hero-prev hidden md:inline-flex absolute left-4 md:left-8 xl:left-12 top-1/2 -translate-y-1/2 z-10 select-none transition-transform hover:scale-105 cursor-pointer"
         aria-label="Önceki"
@@ -102,7 +201,12 @@ export default function HeroSection() {
         className="hero-next hidden md:inline-flex absolute right-4 md:right-8 xl:right-12 top-1/2 -translate-y-1/2 z-10 select-none transition-transform hover:scale-105 cursor-pointer"
         aria-label="Sonraki"
       >
-        <Image src="/icons/arrowRight.png" alt="Sonraki" width="36" height="36" />
+        <Image
+          src="/icons/arrowRight.png"
+          alt="Sonraki"
+          width="36"
+          height="36"
+        />
       </button>
       <style jsx global>{`
         .mySwiper .swiper-pagination-bullet {
