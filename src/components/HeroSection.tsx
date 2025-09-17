@@ -178,14 +178,14 @@ export default function HeroSection() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="w-full h-full flex items-center justify-start translate-y-[25px] relative overflow-hidden">
-            <div
-              className="hidden md:block absolute md:right-20 md:top-[87px] xl:right-40 z-10 md:text-left"
-              style={{
-                color: "rgba(255, 255, 255, 1)",
-                fontFamily:
-                  '"Saira Condensed", var(--font-saira), ui-sans-serif, system-ui, -apple-system, "Segoe UI"',
-              }}
-            >
+              <div
+                className="hidden md:block absolute md:right-20 md:top-[87px] xl:right-40 z-10 md:text-left"
+                style={{
+                  color: "rgba(255, 255, 255, 1)",
+                  fontFamily:
+                    '"Saira Condensed", var(--font-saira), ui-sans-serif, system-ui, -apple-system, "Segoe UI"',
+                }}
+              >
               <h2
                 className="font-bold text-[30px] md:text-[60.1px] leading-[110%]"
                 style={{ letterSpacing: "-0.02em" }}
@@ -325,6 +325,9 @@ export default function HeroSection() {
           }
           .mySwiper .swiper-slide {
             position: static !important;
+          }
+          .mySwiper .swiper-pagination {
+            display: none !important;
           }
         }
 
