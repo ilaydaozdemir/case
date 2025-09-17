@@ -1,3 +1,4 @@
+import FavFrame from "@/ui/favFrame";
 import Image from "next/image";
 
 export default function FavSection(){
@@ -80,9 +81,7 @@ export default function FavSection(){
                     </div>
                     
                     <div className="flex-1">
-                        <div className="text-white">
-                            <p>İçerik burada görünecek</p>
-                        </div>
+                       <FavFrame/>
                     </div>
                 </div>
             </div>
