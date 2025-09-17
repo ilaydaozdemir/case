@@ -29,7 +29,7 @@
     "user_id": "65a11bebe1495d4af5f535c4",
     "type": "posts",
     "attributes": {
-      "trends": false,
+      "trends": true,
       "category": ["Videolar", "Müzik"],
       "tags": ["Haftanın Videoları", "Ayın Videoları"],
       "authors": ["Rapkology"],
@@ -54,7 +54,7 @@
     "user_id": "65a11bebe1495d4af5f535c4",
     "type": "posts",
     "attributes": {
-      "trends": false,
+      "trends": true,
       "category": ["Videolar", "Müzik"],
       "tags": ["Haftanın Videoları", "Ayın Videoları"],
       "authors": ["Rapkology"],
