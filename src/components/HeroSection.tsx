@@ -14,18 +14,22 @@ export default function HeroSection() {
   const slideContent = [
     {
       title: ["DÜNYA RAP", "TRENDLERİNİ", "KONUŞUYORUZ."],
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi."
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
     },
     {
       title: ["TÜRKÇE RAP VE", "DÜNYA MÜZİK", "HABERLERİNİ TAKİP ET"],
-      description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis."
-    }
+      description:
+        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.",
+    },
   ];
 
   return (
     <div className="relative">
-      {/* Mobile text section - above slider */}
-      <div className="block md:hidden px-4 pt-24 pb-8 bg-black">
+      <div
+        className="block md:hidden px-4 pt-24 pb-0 bg-gradient-to-b from-black via-black/90 to-transparent relative z-10"
+        style={{ marginBottom: "-120px" }}
+      >
         <div
           className="text-center"
           style={{
@@ -39,7 +43,9 @@ export default function HeroSection() {
             style={{ letterSpacing: "-0.02em" }}
           >
             {slideContent[currentSlide].title.map((line, index) => (
-              <span key={index} className="block">{line}</span>
+              <span key={index} className="block">
+                {line}
+              </span>
             ))}
           </h2>
           <p
@@ -51,16 +57,22 @@ export default function HeroSection() {
           >
             {slideContent[currentSlide].description}
           </p>
-          <div className="mt-4" style={{ filter: "drop-shadow(5.55px 5.55px 0px rgba(0, 0, 0, 1))" }}>
+          <div
+            className="mt-4 "
+            style={{
+              filter: "drop-shadow(5.55px 5.55px 0px rgba(0, 0, 0, 1))",
+            }}
+          >
             <button
               className="text-black border-0 cursor-pointer flex items-center justify-center mx-auto"
               style={{
                 width: "136px",
                 height: "39px",
                 backgroundColor: "rgba(240, 231, 77, 1)",
-                clipPath: "polygon(0 0, 100% 0, 95% 88%, 4% 73%);",
-                WebkitClipPath: "polygon(0 0, 100% 0, 95% 88%, 4% 73%);;",
-                fontFamily: "var(--font-saira), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial",
+                clipPath: "polygon(0 0, 100% 0, 94% 100%, 4% 88%)",
+                WebkitClipPath: "polygon(0 0, 100% 0, 94% 100%, 4% 88%)",
+                fontFamily:
+                  "var(--font-saira), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial",
                 fontWeight: "700",
                 fontSize: "14px",
                 lineHeight: "1",
@@ -82,13 +94,13 @@ export default function HeroSection() {
           prevEl: ".hero-prev",
         }}
         pagination={true}
-        mousewheel={true}
+        mousewheel={false}
         keyboard={true}
         allowTouchMove={true}
         touchRatio={1}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className="mySwiper"
-        style={{ height: "623px" }}
+        style={{ height: "623px", overflow: "hidden" }}
         onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
       >
         <SwiperSlide>
@@ -105,8 +117,10 @@ export default function HeroSection() {
                 className="font-bold text-[30px] md:text-[60.1px] leading-[110%]"
                 style={{ letterSpacing: "-0.02em" }}
               >
-{slideContent[0].title.map((line, index) => (
-                  <span key={index} className="block">{line}</span>
+                {slideContent[0].title.map((line, index) => (
+                  <span key={index} className="block">
+                    {line}
+                  </span>
                 ))}
               </h2>
               <p
@@ -116,10 +130,7 @@ export default function HeroSection() {
                     'var(--font-saira), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial',
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi.
+                {slideContent[currentSlide].description}
               </p>
               <div
                 className="mt-4"
@@ -133,8 +144,8 @@ export default function HeroSection() {
                     width: "136px",
                     height: "39px",
                     backgroundColor: "rgba(240, 231, 77, 1)",
-                    clipPath: "polygon(0 0, 100% 0, 95% 97%, 5% 83%);",
-                    WebkitClipPath: "polygon(0 0, 100% 0, 95% 97%, 5% 83%);",
+                    clipPath: "polygon(0 0, 100% 0, 94% 100%, 4% 88%)",
+                    WebkitClipPath: "polygon(0 0, 100% 0, 94% 100%, 4% 88%)",
                     fontFamily:
                       "var(--font-saira), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial",
                     fontWeight: "700",
@@ -180,7 +191,9 @@ export default function HeroSection() {
                 style={{ letterSpacing: "-0.02em" }}
               >
                 {slideContent[1].title.map((line, index) => (
-                  <span key={index} className="block">{line}</span>
+                  <span key={index} className="block">
+                    {line}
+                  </span>
                 ))}
               </h2>
               <p
@@ -190,10 +203,7 @@ export default function HeroSection() {
                     'var(--font-saira), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial',
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi.
+                {slideContent[currentSlide].description}
               </p>
               <div
                 className="mt-4"
@@ -303,6 +313,21 @@ export default function HeroSection() {
             top: 480px !important;
           }
         }
+
+        /* Disable mobile scrolling and movement */
+        @media (max-width: 767px) {
+          .mySwiper {
+            touch-action: pan-y !important;
+            overflow: hidden !important;
+          }
+          .mySwiper .swiper-wrapper {
+            transform: none !important;
+          }
+          .mySwiper .swiper-slide {
+            position: static !important;
+          }
+        }
+
         .mySwiper .swiper-button-next,
         .mySwiper .swiper-button-prev {
           display: none;
