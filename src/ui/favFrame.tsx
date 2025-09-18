@@ -85,7 +85,6 @@ export default function FavFrame() {
         </p>
       </div>
 
-      {/* Desktop görünüm - Yazılar */}
       <div className="flex-1 flex flex-col justify-center items-center relative z-10 hidden md:flex">
         <p
           className="text-white mb-4 whitespace-nowrap"
