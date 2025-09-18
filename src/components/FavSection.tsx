@@ -1,12 +1,13 @@
 "use client";
+import React, { useState, useEffect, useRef } from "react";
 import FavFrame from "@/ui/favFrame";
 import Image from "next/image";
-import React, { useState } from "react";
 
 export default function FavSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const totalSlides = 3;
+  const sliderRef = useRef<HTMLDivElement>(null);
 
   const nextSlide = () => {
     if (isTransitioning) return;
@@ -22,17 +23,16 @@ export default function FavSection() {
     setTimeout(() => setIsTransitioning(false), 700);
   };
 
-  // Mouse wheel handler
-  const handleWheel = (e: React.WheelEvent) => {
-    e.preventDefault();
+  const handleWheel = (e: WheelEvent) => {
     if (isTransitioning) return;
 
-    if (e.deltaY > 0) {
-      // Scroll down - next slide
-      nextSlide();
-    } else if (e.deltaY < 0) {
-      // Scroll up - prev slide
-      prevSlide();
+    if (Math.abs(e.deltaY) > 10) {
+      e.preventDefault();
+      if (e.deltaY > 0) {
+        nextSlide();
+      } else if (e.deltaY < 0) {
+        prevSlide();
+      }
     }
   };
 
@@ -45,6 +45,7 @@ export default function FavSection() {
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
+    if (isTransitioning) return;
     setTouchEnd(e.targetTouches[0].clientX);
   };
 
@@ -61,6 +62,17 @@ export default function FavSection() {
       prevSlide();
     }
   };
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+    if (!slider) return;
+
+    slider.addEventListener("wheel", handleWheel, { passive: false });
+
+    return () => {
+      slider.removeEventListener("wheel", handleWheel);
+    };
+  }, [isTransitioning]);
 
   // Keyboard navigation
   React.useEffect(() => {
@@ -141,7 +153,6 @@ export default function FavSection() {
         />
       </div>
 
-      {/* İçerik alanı */}
       <div className="px-4 md:px-8 lg:px-16 mt-16 md:mt-50 overflow-hidden">
         <div className="flex flex-col md:flex-row gap-8">
           <div className="flex-1 flex-shrink-0">
@@ -164,9 +175,16 @@ export default function FavSection() {
           <div className="flex-1 relative">
             {/* Custom Smooth Slider Container */}
             <div
+              ref={sliderRef}
               className="slider-container relative w-full overflow-hidden select-none"
-              style={{ height: "400px" }}
-              onWheel={handleWheel}
+              style={{
+                height: "400px",
+                touchAction: "pan-y",
+                userSelect: "none",
+                WebkitUserSelect: "none",
+                MozUserSelect: "none",
+                msUserSelect: "none",
+              }}
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
