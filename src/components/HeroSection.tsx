@@ -104,7 +104,7 @@ export default function HeroSection() {
         onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
       >
         <SwiperSlide>
-          <div className="w-full h-full  flex items-center justify-center translate-y-[25px] relative overflow-hidden">
+          <div className="w-full h-full  flex items-center justify-center relative overflow-hidden">
             <div
               className="hidden md:block absolute md:right-20 md:top-[87px] xl:right-40 z-10 md:text-left"
               style={{
@@ -177,7 +177,7 @@ export default function HeroSection() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="w-full h-full flex items-center justify-start translate-y-[25px] relative overflow-hidden">
+          <div className="w-full h-full flex items-center justify-start relative overflow-hidden">
               <div
                 className="hidden md:block absolute md:right-20 md:top-[87px] xl:right-40 z-10 md:text-left"
                 style={{

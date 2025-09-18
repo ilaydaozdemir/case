@@ -77,13 +77,13 @@ export default function TrendFrame() {
             <div className="flex gap-2 md:gap-6">
               <div className="w-[50px] md:w-[80px]"></div>
               <div
-                className="w-[200px] md:w-[301px] h-[1px]"
+                className="w-[280px] md:w-[301px] h-[1px] "
                 style={{ backgroundColor: "rgba(59, 59, 59, 1)" }}
               ></div>
             </div>
-            <div className="flex gap-2 md:gap-6">
+            <div className="flex gap-2 md:gap-6 ">
               <div className="w-[50px] md:w-[80px]"></div>
-              <div className="text-white text-xs md:text-base hover:text-[#F0E74D] cursor-pointer">
+              <div className="w-[280px] md:w-auto text-white text-xs md:text-base hover:text-[#F0E74D] cursor-pointer">
                 Daha Fazla Oku
               </div>
             </div>
