@@ -14,9 +14,17 @@ export default function Header() {
   return (
     <header
       className="fixed top-0 left-0 right-0 z-[9999] bg-[rgba(18,18,18,0.1)] border-b border-[#2A2A2A]"
-      style={{ WebkitBackdropFilter: "blur(24px)", backdropFilter: "blur(24px)" }}
+      style={{
+        WebkitBackdropFilter: "blur(24px)",
+        backdropFilter: "blur(24px)",
+        maxWidth: "100vw",
+        overflowX: "hidden",
+      }}
     >
-      <div className="max-w-[1200px] mx-auto flex items-center justify-between gap-3 px-4 h-[80px]">
+      <div
+        className="max-w-[1200px] mx-auto flex items-center justify-between gap-3 px-4 h-[80px]"
+        style={{ maxWidth: "100vw", overflowX: "hidden" }}
+      >
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/">

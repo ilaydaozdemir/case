@@ -26,10 +26,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={saira.variable}>
+    <html lang="en" style={{ overflowX: "hidden", maxWidth: "100vw" }}>
+      <body
+        className={saira.variable}
+        style={{ overflowX: "hidden", maxWidth: "100vw" }}
+      >
         <Header />
-        <main>{children}</main>
+        <main style={{ overflowX: "hidden", maxWidth: "100vw" }}>
+          {children}
+        </main>
       </body>
     </html>
   );

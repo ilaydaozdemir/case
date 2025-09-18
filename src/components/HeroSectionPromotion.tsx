@@ -4,7 +4,10 @@ import Image from "next/image";
 
 export default function HeroSectionPromotion() {
   return (
-    <div className="relative w-full h-[600px] overflow-hidden">
+    <div
+      className="relative w-full h-[600px] overflow-hidden"
+      style={{ maxWidth: "100vw", overflowX: "hidden" }}
+    >
       <div className="absolute inset-0">
         <Image
           src="/images/hero2Bc.png"

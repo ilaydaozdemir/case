@@ -95,6 +95,8 @@ export default function FavSection() {
         backgroundColor: "rgba(18,18,18,1)",
         paddingTop: "72px",
         minHeight: "400px",
+        overflowX: "hidden",
+        maxWidth: "100vw",
       }}
     >
       {/* Mobil görünüm */}
@@ -153,7 +155,14 @@ export default function FavSection() {
         />
       </div>
 
-      <div className="px-4 md:px-8 lg:px-16 mt-16 md:mt-50 overflow-hidden">
+      <div
+        className="px-4 md:px-8 lg:px-16 mt-16 md:mt-50 overflow-hidden"
+        style={{
+          boxSizing: "border-box",
+          maxWidth: "100vw",
+          overflowX: "hidden",
+        }}
+      >
         <div className="flex flex-col md:flex-row gap-8">
           <div className="flex-1 flex-shrink-0">
             <h2
@@ -184,6 +193,8 @@ export default function FavSection() {
                 WebkitUserSelect: "none",
                 MozUserSelect: "none",
                 msUserSelect: "none",
+                overflowX: "hidden",
+                maxWidth: "100%",
               }}
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
@@ -196,7 +207,7 @@ export default function FavSection() {
                     className="absolute transition-all duration-700 ease-out cursor-pointer"
                     style={{
                       transform: `translateX(${
-                        (index - currentSlide) * 300
+                        (index - currentSlide) * 280
                       }px)`,
                       opacity:
                         Math.abs(index - currentSlide) <= 1
