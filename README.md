@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RapKology - Türkçe Rap ve Dünya Müzik Haberleri Platformu
 
-## Getting Started
+## 🚀 Özellikler
 
-First, run the development server:
+Proje içerisinde slider alanlarını geliştirmek için hem Swiper.js kütüphanesini hem de özelleştirilmiş (custom) slider yapıları oluşturdum.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### 📱 Responsive Tasarım
+
+### 📰 İçerik Yönetimi
+
+- **Dynamic Content**: JSON tabanlı içerik sistemi
+- **Category Filtering**: Kategori bazlı içerik filtreleme
+- **Real-time Updates**: Dinamik veri güncellemeleri
+
+## 🛠️ Teknolojiler
+
+### Frontend Framework
+
+- **Next.js 14**
+- **React 18**
+- **TypeScript**
+
+### Styling & UI
+
+- **Tailwind CSS**
+- **Custom CSS**
+- **Responsive Design**
+
+### UI Components
+
+- **Swiper.js**
+- **Next.js Image**
+- **Custom Components**
+
+## 📁 Proje Yapısı
+
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── api/               # API routes
+│   ├── globals.css        # Global styles
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Home page
+├── components/            # React components
+│   ├── Header.tsx         # Navigation header
+│   ├── HeroSection.tsx    # Main hero slider
+│   ├── HeroSectionPromotion.tsx # Promotion section
+│   ├── TrendSection.tsx   # Trending content
+│   ├── FavSection.tsx     # Favorites slider
+│   └── ExploreSection.tsx # Explore content with filters
+├── ui/                    # UI components
+│   ├── trendFrame.tsx     # Trend content frame
+│   └── favFrame.tsx       # Favorite content frame
+├── data/                  # Static data
+│   └── posts.json         # Content data
+└── types/                 # TypeScript types
+    └── post.ts            # Post interface
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Ana Bölümler
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. Header Navigation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Mobile Hamburger**: Touch-friendly mobile navigation
 
-## Learn More
+### 2. Hero Section
 
-To learn more about Next.js, take a look at the following resources:
+- **Image Slider**: Swiper.js ile smooth transitions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Trend Section
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Dynamic Posts**: JSON'dan gelen trend içerikleri
 
-## Deploy on Vercel
+### 4. Favorites Section
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Horizontal Slider**: Touch-friendly sliding
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 5. Explore Section
+
+- **Dynamic Content**: Seçilen kategoriye göre içerik
+
+## 🎨 Tasarım Sistemi
+
+## 🚀 Kurulum ve Çalıştırma
+
+### Gereksinimler
+
+- Node.js 18+
+- npm veya yarn
+
+### Kurulum
+
+```bash
+# Dependencies yükle
+npm install
+
+# Development server başlat
+npm run dev
+
+# Production build
+npm run build
+npm start
+```
+
+### Development Commands
+
+```bash
+npm run dev      # Development server
+npm run build    # Production build
+npm run start    # Production server
+
+```
+
+## 📄 Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır.
+
+---
