@@ -79,8 +79,6 @@ src/
 
 - **Dynamic Content**: Seçilen kategoriye göre içerik
 
-## 🎨 Tasarım Sistemi
-
 ## 🚀 Kurulum ve Çalıştırma
 
 ### Gereksinimler
