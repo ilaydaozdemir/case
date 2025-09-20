@@ -385,11 +385,249 @@ export default function ExploreSection() {
               </div>
             </div>
           </div>
+
+          {/* Daha Fazla Gör Butonu */}
+          <div className="mt-8 flex justify-center">
+            <button
+              className="text-black border-0 cursor-pointer flex items-center justify-center mx-auto"
+              style={{
+                width: "136px",
+                height: "39px",
+                backgroundColor: "rgba(255, 255, 255, 1)",
+                clipPath: "polygon(0 0, 100% 0, 94% 100%, 4% 88%)",
+                WebkitClipPath: "polygon(0 0, 100% 0, 94% 100%, 4% 88%)",
+                fontFamily:
+                  "var(--font-saira), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial",
+                fontWeight: "700",
+                fontSize: "14px",
+                lineHeight: "1",
+                letterSpacing: "0%",
+                textAlign: "center",
+                color: "black",
+              }}
+            >
+              Daha Fazla Gör
+            </button>
+          </div>
+
+          {/* Mobile Newsletter Section */}
+          <div className="lg:hidden px-4 md:px-8" style={{ marginTop: "80px" }}>
+            <h3
+              className="text-white font-bold mb-8"
+              style={{
+                fontFamily:
+                  '"Saira Condensed", var(--font-saira), ui-sans-serif, system-ui, -apple-system, "Segoe UI"',
+                fontWeight: "700",
+                lineHeight: "104%",
+                fontSize: "24px",
+                color: "white",
+              }}
+            >
+              GELİŞMELERDEN İLK SEN
+              <br />
+              HABERDAR OL!
+            </h3>
+
+            <div className="relative" style={{ marginBottom: "50px" }}>
+              <input
+                type="email"
+                placeholder="EMAIL"
+                className="w-full bg-transparent text-white border-0 border-b px-0 py-4 outline-none focus:border-b-2"
+                style={{
+                  borderBottom: "1px solid rgba(59, 59, 59, 1)",
+                  fontFamily:
+                    "Saira, ui-sans-serif, system-ui, -apple-system, 'Segoe UI'",
+                  fontWeight: "700",
+                  fontStyle: "Bold",
+                  fontSize: "14px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                }}
+              />
+              <div className="absolute right-0 top-1/2 transform -translate-y-1/2 flex items-center gap-2 cursor-pointer">
+                <span
+                  style={{
+                    color: "rgba(240, 231, 77, 1)",
+                    fontFamily:
+                      "Saira, ui-sans-serif, system-ui, -apple-system, 'Segoe UI'",
+                    fontWeight: "700",
+                    fontStyle: "Bold",
+                    fontSize: "14px",
+                    lineHeight: "100%",
+                    letterSpacing: "0%",
+                    textAlign: "right",
+                  }}
+                >
+                  GÖNDER
+                </span>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  style={{ color: "rgba(240, 231, 77, 1)" }}
+                >
+                  <path
+                    d="M5 12H19M19 12L12 5M19 12L12 19"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-6 mb-8">
+              <div className="cursor-pointer hover:opacity-80 transition-opacity duration-300">
+                <Image
+                  src="/icons/facebook.png"
+                  alt="Facebook"
+                  width={32}
+                  height={32}
+                  className="w-8 h-8 object-contain"
+                />
+              </div>
+
+              <div className="cursor-pointer hover:opacity-80 transition-opacity duration-300">
+                <Image
+                  src="/icons/x.png"
+                  alt="X"
+                  width={32}
+                  height={32}
+                  className="w-8 h-8 object-contain"
+                />
+              </div>
+
+              <div className="cursor-pointer hover:opacity-80 transition-opacity duration-300">
+                <Image
+                  src="/icons/discord.png"
+                  alt="Discord"
+                  width={32}
+                  height={32}
+                  className="w-8 h-8 object-contain"
+                />
+              </div>
+
+              <div className="cursor-pointer hover:opacity-80 transition-opacity duration-300">
+                <Image
+                  src="/icons/spotify.png"
+                  alt="Spotify"
+                  width={32}
+                  height={32}
+                  className="w-8 h-8 object-contain"
+                />
+              </div>
+
+              <div className="cursor-pointer hover:opacity-80 transition-opacity duration-300">
+                <Image
+                  src="/icons/youtube.png"
+                  alt="YouTube"
+                  width={32}
+                  height={32}
+                  className="w-8 h-8 object-contain"
+                />
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-2 mb-8">
+              <div className="flex items-center gap-8">
+                <a
+                  href="/haberler"
+                  className="text-white cursor-pointer hover:text-[#F0E74D] transition-colors duration-300"
+                  style={{
+                    fontFamily:
+                      'var(--font-saira), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial',
+                    fontWeight: "400",
+                    fontSize: "14px",
+                    lineHeight: "120%",
+                    letterSpacing: "0%",
+                  }}
+                >
+                  HABERLER
+                </a>
+                <a
+                  href="/etkinlikler"
+                  className="text-white cursor-pointer hover:text-[#F0E74D] transition-colors duration-300"
+                  style={{
+                    fontFamily:
+                      'var(--font-saira), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial',
+                    fontWeight: "400",
+                    fontSize: "14px",
+                    lineHeight: "120%",
+                    letterSpacing: "0%",
+                  }}
+                >
+                  ETKİNLİKLER
+                </a>
+              </div>
+
+              <div className="flex items-center gap-8">
+                <a
+                  href="/muzikler"
+                  className="text-white cursor-pointer hover:text-[#F0E74D] transition-colors duration-300"
+                  style={{
+                    fontFamily:
+                      'var(--font-saira), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial',
+                    fontWeight: "400",
+                    fontSize: "14px",
+                    lineHeight: "120%",
+                    letterSpacing: "0%",
+                  }}
+                >
+                  MÜZİKLER
+                </a>
+                <a
+                  href="/videolar"
+                  className="text-white cursor-pointer hover:text-[#F0E74D] transition-colors duration-300"
+                  style={{
+                    fontFamily:
+                      'var(--font-saira), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial',
+                    fontWeight: "400",
+                    fontSize: "14px",
+                    lineHeight: "120%",
+                    letterSpacing: "0%",
+                  }}
+                >
+                  VİDEOLAR
+                </a>
+                <a
+                  href="/iletisim"
+                  className="text-white cursor-pointer hover:text-[#F0E74D] transition-colors duration-300"
+                  style={{
+                    fontFamily:
+                      'var(--font-saira), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial',
+                    fontWeight: "400",
+                    fontSize: "14px",
+                    lineHeight: "120%",
+                    letterSpacing: "0%",
+                  }}
+                >
+                  İLETİŞİM
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <p
+                className="text-left"
+                style={{
+                  fontFamily:
+                    'var(--font-saira), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial',
+                  fontWeight: "400",
+                  fontSize: "14px",
+                  lineHeight: "120%",
+                  letterSpacing: "0%",
+                  color: "rgba(92, 92, 92, 1)",
+                }}
+              >
+                © RAPKOLOGY All Rights Are Reserved 2022.
+              </p>
+            </div>
+          </div>
         </div>
         <div className="flex-1 hidden lg:block">
-          {/* Content 2 - Desktop only */}
           <div className="px-4 md:px-8 lg:px-16">
-            {/* Title */}
             <h2
               className="text-white font-bold mb-8 text-[28px] md:text-[40px]"
               style={{
@@ -406,7 +644,6 @@ export default function ExploreSection() {
               NE GÖRMEK İSTERSİN?
             </h2>
 
-            {/* Buttons */}
             <div className="flex flex-wrap gap-4">
               {buttons.map((button, index) => (
                 <button
@@ -438,6 +675,222 @@ export default function ExploreSection() {
                   {button}
                 </button>
               ))}
+            </div>
+
+            <div style={{ marginTop: "200px" }}>
+              {/* Title */}
+              <h3
+                className="text-white font-bold mb-8"
+                style={{
+                  fontFamily:
+                    '"Saira Condensed", var(--font-saira), ui-sans-serif, system-ui, -apple-system, "Segoe UI"',
+                  fontWeight: "700",
+                  lineHeight: "104%",
+                  fontSize: "30px",
+                  color: "white",
+                }}
+              >
+                GELİŞMELERDEN İLK SEN
+                <br />
+                HABERDAR OL!
+              </h3>
+
+              <div className="relative" style={{ marginBottom: "50px" }}>
+                <input
+                  type="email"
+                  placeholder="EMAIL"
+                  className="w-full bg-transparent text-white border-0 border-b px-0 py-4 outline-none focus:border-b-2"
+                  style={{
+                    borderBottom: "1px solid rgba(59, 59, 59, 1)",
+                    fontFamily:
+                      "Saira, ui-sans-serif, system-ui, -apple-system, 'Segoe UI'",
+                    fontWeight: "700",
+                    fontStyle: "Bold",
+                    fontSize: "14px",
+                    lineHeight: "100%",
+                    letterSpacing: "0%",
+                  }}
+                />
+                <div className="absolute right-0 top-1/2 transform -translate-y-1/2 flex items-center gap-2 cursor-pointer">
+                  <span
+                    style={{
+                      color: "rgba(240, 231, 77, 1)",
+                      fontFamily:
+                        "Saira, ui-sans-serif, system-ui, -apple-system, 'Segoe UI'",
+                      fontWeight: "700",
+                      fontStyle: "Bold",
+                      fontSize: "14px",
+                      lineHeight: "100%",
+                      letterSpacing: "0%",
+                      textAlign: "right",
+                    }}
+                  >
+                    GÖNDER
+                  </span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    style={{ color: "rgba(240, 231, 77, 1)" }}
+                  >
+                    <path
+                      d="M5 12H19M19 12L12 5M19 12L12 19"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-6">
+                <div className="cursor-pointer hover:opacity-80 transition-opacity duration-300">
+                  <Image
+                    src="/icons/facebook.png"
+                    alt="Facebook"
+                    width={32}
+                    height={32}
+                    className="w-8 h-8 object-contain"
+                  />
+                </div>
+
+                <div className="cursor-pointer hover:opacity-80 transition-opacity duration-300">
+                  <Image
+                    src="/icons/x.png"
+                    alt="X"
+                    width={32}
+                    height={32}
+                    className="w-8 h-8 object-contain"
+                  />
+                </div>
+                <div className="cursor-pointer hover:opacity-80 transition-opacity duration-300">
+                  <Image
+                    src="/icons/discord.png"
+                    alt="Discord"
+                    width={32}
+                    height={32}
+                    className="w-8 h-8 object-contain"
+                  />
+                </div>
+                <div className="cursor-pointer hover:opacity-80 transition-opacity duration-300">
+                  <Image
+                    src="/icons/spotify.png"
+                    alt="Spotify"
+                    width={32}
+                    height={32}
+                    className="w-8 h-8 object-contain"
+                  />
+                </div>
+                <div className="cursor-pointer hover:opacity-80 transition-opacity duration-300">
+                  <Image
+                    src="/icons/youtube.png"
+                    alt="YouTube"
+                    width={32}
+                    height={32}
+                    className="w-8 h-8 object-contain"
+                  />
+                </div>
+              </div>
+
+              <div
+                className="flex flex-col gap-2"
+                style={{ marginTop: "80px" }}
+              >
+                <div className="flex items-center gap-8">
+                  <a
+                    href="/haberler"
+                    className="text-white cursor-pointer hover:text-[#F0E74D] transition-colors duration-300"
+                    style={{
+                      fontFamily:
+                        'var(--font-saira), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial',
+                      fontWeight: "400",
+                      fontSize: "14px",
+                      lineHeight: "120%",
+                      letterSpacing: "0%",
+                    }}
+                  >
+                    HABERLER
+                  </a>
+                  <a
+                    href="/etkinlikler"
+                    className="text-white cursor-pointer hover:text-[#F0E74D] transition-colors duration-300"
+                    style={{
+                      fontFamily:
+                        'var(--font-saira), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial',
+                      fontWeight: "400",
+                      fontSize: "14px",
+                      lineHeight: "120%",
+                      letterSpacing: "0%",
+                    }}
+                  >
+                    ETKİNLİKLER
+                  </a>
+                </div>
+
+                <div className="flex items-center gap-8">
+                  <a
+                    href="/muzikler"
+                    className="text-white cursor-pointer hover:text-[#F0E74D] transition-colors duration-300"
+                    style={{
+                      fontFamily:
+                        'var(--font-saira), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial',
+                      fontWeight: "400",
+                      fontSize: "14px",
+                      lineHeight: "120%",
+                      letterSpacing: "0%",
+                    }}
+                  >
+                    MÜZİKLER
+                  </a>
+                  <a
+                    href="/videolar"
+                    className="text-white cursor-pointer hover:text-[#F0E74D] transition-colors duration-300"
+                    style={{
+                      fontFamily:
+                        'var(--font-saira), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial',
+                      fontWeight: "400",
+                      fontSize: "14px",
+                      lineHeight: "120%",
+                      letterSpacing: "0%",
+                    }}
+                  >
+                    VİDEOLAR
+                  </a>
+                  <a
+                    href="/iletisim"
+                    className="text-white cursor-pointer hover:text-[#F0E74D] transition-colors duration-300"
+                    style={{
+                      fontFamily:
+                        'var(--font-saira), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial',
+                      fontWeight: "400",
+                      fontSize: "14px",
+                      lineHeight: "120%",
+                      letterSpacing: "0%",
+                    }}
+                  >
+                    İLETİŞİM
+                  </a>
+                </div>
+              </div>
+
+              <div style={{ marginTop: "40px" }}>
+                <p
+                  className="text-left"
+                  style={{
+                    fontFamily:
+                      'var(--font-saira), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial',
+                    fontWeight: "400",
+                    fontSize: "14px",
+                    lineHeight: "120%",
+                    letterSpacing: "0%",
+                    color: "rgba(92, 92, 92, 1)",
+                  }}
+                >
+                  © RAPKOLOGY All Rights Are Reserved 2022.
+                </p>
+              </div>
             </div>
           </div>
         </div>

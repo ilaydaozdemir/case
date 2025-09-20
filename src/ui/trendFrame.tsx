@@ -10,18 +10,17 @@ export default function TrendFrame() {
 
   return (
     <div className="px-4 md:px-8 lg:px-16 mt-8">
-      <div className="space-y-4 md:space-y-0 w-full max-w-[413px] mx-auto md:max-w-none md:mx-0">
-        <div className="md:grid md:grid-cols-3 md:gap-8 lg:gap-12">
+      <div className="space-y-4 lg:space-y-0 w-full max-w-[413px] mx-auto lg:max-w-none lg:mx-0">
+        <div className="lg:grid lg:grid-cols-3 lg:gap-12">
         {trendPosts.map((post, index) => (
-          <div key={post._id} className="space-y-2 md:space-y-4 md:max-w-none mb-8 md:mb-0">
+          <div key={post._id} className="space-y-2 md:space-y-4 md:max-w-none mb-8 lg:mb-0">
             <div className="flex items-start gap-3 md:gap-6 hover:transform hover:scale-[1.02] transition-transform duration-300 cursor-pointer">
               <div
-                className="flex items-center justify-center text-white font-bold"
+                className="flex items-center justify-center text-white font-bold text-4xl md:text-5xl lg:text-[60px]"
                 style={{
                   fontFamily:
                     '"Saira Condensed", var(--font-saira), ui-sans-serif, system-ui, -apple-system, "Segoe UI"',
                   fontWeight: "700",
-                  fontSize: "60px",
                   lineHeight: "89%",
                   letterSpacing: "0%",
                   flexShrink: 0,
@@ -44,12 +43,11 @@ export default function TrendFrame() {
                     className="rounded-[4px] object-cover"
                   />
                   <p
-                    className="text-white"
+                    className="text-white text-lg md:text-xl lg:text-[25px]"
                     style={{
                       fontFamily:
                         'var(--font-saira), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial',
                       fontWeight: "700",
-                      fontSize: "25px",
                       lineHeight: "120%",
                       letterSpacing: "1.5%",
                     }}
@@ -59,12 +57,11 @@ export default function TrendFrame() {
                 </div>
 
                 <h3
-                  className="text-white font-bold uppercase"
+                  className="text-white font-bold uppercase text-sm md:text-base"
                   style={{
                     fontFamily:
                       '"Saira Condensed", var(--font-saira), ui-sans-serif, system-ui, -apple-system, "Segoe UI"',
                     fontWeight: "700",
-                    fontSize: "16px",
                     lineHeight: "104%",
                     letterSpacing: "0%",
                     textTransform: "uppercase",
