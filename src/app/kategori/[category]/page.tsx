@@ -6,14 +6,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 interface PageProps {
-  params: {
+  params: Promise<{
     category: string;
-  };
+  }>;
 }
 
 // Dinamik metadata oluşturma
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const metadata = generateCategoryMetadata(params.category);
+  const resolvedParams = await params;
+  const metadata = generateCategoryMetadata(resolvedParams.category);
   
   if (!metadata) {
     return {
@@ -37,10 +38,11 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function CategoryPage({ params }: PageProps) {
+export default async function CategoryPage({ params }: PageProps) {
   const allPosts = posts as Post[];
+  const resolvedParams = await params;
   const categoryPosts = allPosts.filter(post => 
-    post.attributes.category.includes(params.category)
+    post.attributes.category.includes(resolvedParams.category)
   );
   
   if (categoryPosts.length === 0) {
@@ -60,10 +62,10 @@ export default function CategoryPage({ params }: PageProps) {
         {/* Header */}
         <header className="mb-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            {params.category}
+            {resolvedParams.category}
           </h1>
           <p className="text-gray-400 text-lg">
-            {categoryPosts.length} adet {params.category.toLowerCase()} içeriği
+            {categoryPosts.length} adet {resolvedParams.category.toLowerCase()} içeriği
           </p>
         </header>
         
@@ -119,7 +121,7 @@ export default function CategoryPage({ params }: PageProps) {
         <div className="mt-12 p-6 bg-gray-900 rounded-lg">
           <h3 className="text-xl font-bold mb-4">Kategori SEO Bilgileri</h3>
           <div className="space-y-2 text-sm">
-            <p><strong>Kategori:</strong> {params.category}</p>
+            <p><strong>Kategori:</strong> {resolvedParams.category}</p>
             <p><strong>Toplam İçerik:</strong> {categoryPosts.length}</p>
             <p><strong>Son Güncelleme:</strong> {new Date().toLocaleString('tr-TR')}</p>
           </div>

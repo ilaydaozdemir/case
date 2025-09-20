@@ -39,7 +39,7 @@ export const generatePostMetadata = (postSlug: string) => {
     description: post.attributes.seo.metaDescription,
     canonical: post.attributes.seo.canonicalURL,
     keywords: post.attributes.tags.join(", "),
-    authors: post.attributes.authors,
+    authors: post.attributes.authors.map(author => ({ name: author })),
     openGraph: {
       title: post.attributes.seo.metaTitle,
       description: post.attributes.seo.metaDescription,

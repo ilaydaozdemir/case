@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import FavFrame from "@/ui/favFrame";
 import Image from "next/image";
 
@@ -9,21 +9,21 @@ export default function FavSection() {
   const totalSlides = 3;
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setCurrentSlide((prev) => (prev + 1) % totalSlides);
     setTimeout(() => setIsTransitioning(false), 700);
-  };
+  }, [isTransitioning]);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
     setTimeout(() => setIsTransitioning(false), 700);
-  };
+  }, [isTransitioning]);
 
-  const handleWheel = (e: WheelEvent) => {
+  const handleWheel = useCallback((e: WheelEvent) => {
     if (isTransitioning) return;
 
     if (Math.abs(e.deltaY) > 10) {
@@ -34,7 +34,7 @@ export default function FavSection() {
         prevSlide();
       }
     }
-  };
+  }, [isTransitioning, nextSlide, prevSlide]);
 
   // Touch handlers for mobile
   const [touchStart, setTouchStart] = useState(0);
@@ -72,7 +72,7 @@ export default function FavSection() {
     return () => {
       slider.removeEventListener("wheel", handleWheel);
     };
-  }, [isTransitioning]);
+  }, [handleWheel]);
 
   // Keyboard navigation
   React.useEffect(() => {
@@ -86,7 +86,7 @@ export default function FavSection() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isTransitioning]);
+  }, [nextSlide, prevSlide]);
 
   return (
     <div

@@ -1,4 +1,4 @@
-import { ComponentMetadata } from "@/types/metadata";
+import { ComponentMetadata, AccessibilityData } from "@/types/metadata";
 
 /**
  * Component Metadata Helper Functions
@@ -91,11 +91,11 @@ export const generateAccessibilityReport = (metadata: ComponentMetadata) => {
 };
 
 // Accessibility skoru hesaplama
-const calculateAccessibilityScore = (accessibility: any) => {
+const calculateAccessibilityScore = (accessibility: AccessibilityData) => {
   let score = 0;
   const maxScore = 5;
 
-  if (accessibility.ariaLabels?.length > 0) score++;
+  if ((accessibility.ariaLabels?.length || 0) > 0) score++;
   if (accessibility.keyboardNavigation) score++;
   if (accessibility.screenReader) score++;
   if (accessibility.colorContrast?.includes("AAA")) score++;

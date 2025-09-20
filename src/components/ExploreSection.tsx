@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useMemo } from "react";
 import posts from "@/data/posts.json";
 import { Post } from "@/types/post";
@@ -532,7 +533,7 @@ export default function ExploreSection() {
 
             <div className="flex flex-col gap-2 mb-8">
               <div className="flex items-center gap-8">
-                <a
+                <Link
                   href="/haberler"
                   className="text-white cursor-pointer hover:text-[#F0E74D] transition-colors duration-300"
                   style={{
@@ -545,8 +546,8 @@ export default function ExploreSection() {
                   }}
                 >
                   HABERLER
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/etkinlikler"
                   className="text-white cursor-pointer hover:text-[#F0E74D] transition-colors duration-300"
                   style={{
@@ -559,11 +560,11 @@ export default function ExploreSection() {
                   }}
                 >
                   ETKİNLİKLER
-                </a>
+                </Link>
               </div>
 
               <div className="flex items-center gap-8">
-                <a
+                <Link
                   href="/muzikler"
                   className="text-white cursor-pointer hover:text-[#F0E74D] transition-colors duration-300"
                   style={{
@@ -576,8 +577,8 @@ export default function ExploreSection() {
                   }}
                 >
                   MÜZİKLER
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/videolar"
                   className="text-white cursor-pointer hover:text-[#F0E74D] transition-colors duration-300"
                   style={{
@@ -590,8 +591,8 @@ export default function ExploreSection() {
                   }}
                 >
                   VİDEOLAR
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/iletisim"
                   className="text-white cursor-pointer hover:text-[#F0E74D] transition-colors duration-300"
                   style={{
@@ -604,7 +605,7 @@ export default function ExploreSection() {
                   }}
                 >
                   İLETİŞİM
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -799,7 +800,7 @@ export default function ExploreSection() {
                 style={{ marginTop: "80px" }}
               >
                 <div className="flex items-center gap-8">
-                  <a
+                  <Link
                     href="/haberler"
                     className="text-white cursor-pointer hover:text-[#F0E74D] transition-colors duration-300"
                     style={{
@@ -812,8 +813,8 @@ export default function ExploreSection() {
                     }}
                   >
                     HABERLER
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="/etkinlikler"
                     className="text-white cursor-pointer hover:text-[#F0E74D] transition-colors duration-300"
                     style={{
@@ -826,11 +827,11 @@ export default function ExploreSection() {
                     }}
                   >
                     ETKİNLİKLER
-                  </a>
+                  </Link>
                 </div>
 
                 <div className="flex items-center gap-8">
-                  <a
+                  <Link
                     href="/muzikler"
                     className="text-white cursor-pointer hover:text-[#F0E74D] transition-colors duration-300"
                     style={{
@@ -843,8 +844,8 @@ export default function ExploreSection() {
                     }}
                   >
                     MÜZİKLER
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="/videolar"
                     className="text-white cursor-pointer hover:text-[#F0E74D] transition-colors duration-300"
                     style={{
@@ -857,8 +858,8 @@ export default function ExploreSection() {
                     }}
                   >
                     VİDEOLAR
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="/iletisim"
                     className="text-white cursor-pointer hover:text-[#F0E74D] transition-colors duration-300"
                     style={{
@@ -871,7 +872,7 @@ export default function ExploreSection() {
                     }}
                   >
                     İLETİŞİM
-                  </a>
+                  </Link>
                 </div>
               </div>
 

@@ -85,7 +85,7 @@ export async function GET(request: NextRequest) {
 }
 
 // Metadata istatistikleri
-export async function POST(request: NextRequest) {
+export async function POST() {
   try {
     const allMetadata = getAllSEOMetadata();
     

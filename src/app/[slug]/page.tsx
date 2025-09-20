@@ -1,19 +1,21 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import { generatePostMetadata } from "@/utils/dynamicMetadata";
 import posts from "@/data/posts.json";
 import { Post } from "@/types/post";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 // Dinamik metadata oluşturma
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const metadata = generatePostMetadata(params.slug);
+  const resolvedParams = await params;
+  const metadata = generatePostMetadata(resolvedParams.slug);
 
   if (!metadata) {
     return {
@@ -34,9 +36,10 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function PostPage({ params }: PageProps) {
+export default async function PostPage({ params }: PageProps) {
+  const resolvedParams = await params;
   const allPosts = posts as Post[];
-  const post = allPosts.find((p) => p.attributes.slug === params.slug);
+  const post = allPosts.find((p) => p.attributes.slug === resolvedParams.slug);
 
   if (!post) {
     return (
@@ -97,9 +100,11 @@ export default function PostPage({ params }: PageProps) {
         </header>
 
         <div className="mb-8">
-          <img
+          <Image
             src={post.attributes.img}
             alt={post.attributes.title}
+            width={1200}
+            height={600}
             className="w-full h-64 md:h-96 object-cover rounded-lg"
           />
         </div>
