@@ -53,8 +53,22 @@ src/
 │   └── favFrame.tsx       # Favorite content frame
 ├── data/                  # Static data
 │   └── posts.json         # Content data
-└── types/                 # TypeScript types
-    └── post.ts            # Post interface
+├── metadata/              # Component metadata system
+│   ├── components/        # Individual component metadata
+│   │   ├── Header.ts      # Header component metadata
+│   │   ├── HeroSection.ts # Hero section metadata
+│   │   ├── TrendSection.ts # Trend section metadata
+│   │   ├── FavSection.ts  # Favorites section metadata
+│   │   └── ExploreSection.ts # Explore section metadata
+│   └── index.ts           # Metadata registry
+├── types/                 # TypeScript types
+│   ├── post.ts            # Post interface
+│   └── metadata.ts        # Metadata interfaces
+├── utils/                 # Utility functions
+│   └── metadataHelper.ts  # Metadata helper functions
+└── pages/api/metadata/    # Metadata API endpoints
+    ├── index.ts           # All metadata endpoint
+    └── [component].ts     # Single component metadata
 ```
 
 ## 🎯 Ana Bölümler
@@ -79,7 +93,93 @@ src/
 
 - **Dynamic Content**: Seçilen kategoriye göre içerik
 
-## 🚀 Kurulum ve Çalıştırma
+## 📊 Component Metadata Sistemi
+
+Projede her component için detaylı metadata sistemi oluşturulmuştur. Bu sistem aşağıdaki faydaları sağlar:
+
+### 🎯 Metadata Faydaları
+
+#### **SEO Optimizasyonu**
+
+- Her component için özel SEO meta tagları
+- Dinamik title ve description oluşturma
+- Open Graph ve Twitter Card desteği
+- Arama motorları için optimize edilmiş içerik
+
+#### **Performance Monitoring**
+
+- Bundle size tracking
+- Render time metrikleri
+- Optimizasyon önerileri
+- Performance raporları
+
+#### **Accessibility Compliance**
+
+- ARIA label kontrolü
+- Keyboard navigation desteği
+- Screen reader uyumluluğu
+- Color contrast kontrolleri
+
+#### **Development Experience**
+
+- Component dokümantasyonu
+- Dependency tracking
+- Feature listesi
+- Version management
+
+### 🔧 Metadata Kullanımı
+
+```typescript
+// Component metadata'ya erişim
+import { getComponentMetadata } from "@/metadata";
+
+const headerMetadata = getComponentMetadata("Header");
+
+// API üzerinden metadata erişimi
+fetch("/api/metadata/Header")
+  .then((res) => res.json())
+  .then((data) => console.log(data));
+
+// Proje geneli istatistikler
+fetch("/api/metadata")
+  .then((res) => res.json())
+  .then((data) => console.log(data.projectStats));
+```
+
+### 📈 Metadata İçeriği
+
+Her component metadata'sı şunları içerir:
+
+- **Temel Bilgiler**: İsim, açıklama, versiyon
+- **Teknik Detaylar**: Dependencies, features
+- **Performance**: Bundle size, render time, optimizasyonlar
+- **SEO**: Title, description, keywords, OG tags
+- **Accessibility**: ARIA labels, keyboard support, contrast
+
+### 🔄 JSON Data Metadata Sistemi
+
+Projede `posts.json` dosyasındaki SEO bilgileri kullanılarak dinamik metadata sistemi oluşturulmuştur:
+
+#### **JSON Data'dan Metadata Çıkarma**
+
+```typescript
+// Her post için mevcut SEO bilgileri:
+{
+  "seo": {
+    "metaTitle": "Lark2020 – ölmemi istemezsin: Güçlü Sözler ve Sert Flow",
+    "metaDescription": "Lark2020'nin yeni şarkısı...",
+    "canonicalURL": "lark2020den-yeni-parca-olmemi-istemezsin-yayinda"
+  }
+}
+```
+
+#### **Dinamik Metadata Oluşturma**
+
+#### **API Endpoints**
+
+#### **SEO Optimizasyonu**
+
+### 🚀 Kurulum ve Çalıştırma
 
 ### Gereksinimler
 
